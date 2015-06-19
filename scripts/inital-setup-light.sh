@@ -1,12 +1,6 @@
 #!/bin/bash
 set -e
 #Light install from dirty linux install
-cd $HOME
-echo "Installing AutoCraft from Github!"
-
-git clone http://github.com/Wferr/AutoCraft.git
-
-echo "Cloned!"
 
 echo "Creating Directories!"
 

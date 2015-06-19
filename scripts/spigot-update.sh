@@ -6,6 +6,7 @@ if [ ! -f $HOME/AutoCraft/resources/spigot/BuildTools.jar ]; then
     echo "BuildTools not found, Downloading!"
     cd $HOME/AutoCraft/resources/spigot/
     wget https://hub.spigotmc.org/jenkins/job/BuildTools/lastSuccessfulBuild/artifact/target/BuildTools.jar
+    echo 'Done!'
 fi
 
 MD5_1 = _$(md5sum "$HOME/AutoCraft/resources/spigot/BuildTools.jar" | cut -d " " -f 1)
@@ -18,12 +19,12 @@ then
 	rm $Home/AutoCraft/resources/spigot/BuildTools.jar
 	mv $HOME/AutoCraft/resources/tmp/BuildTools.jar $HOME/AutoCraft/resources/spigot/BuildTools.jar
 
-	echo "Done"
+	echo "Done!"
 
 	echo "Cleaning TMP directory"
 	rm $HOME/AutoCraft/resources/tmp/BuildTools.jar
 
-	echo "Done"
+	echo "Done!"
     
 fi
 
@@ -55,4 +56,4 @@ then
     
 fi
 
-echo "Done Spigot is upto date!"
+echo "Done! Spigot is upto date!"

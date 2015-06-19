@@ -6,13 +6,13 @@ echo "Creating Directories!"
 
 mkdir $HOME/AutoCraft/backups/
 mkdir $HOME/AutoCraft/backups/full/
-mkdir $HOME/AutoCraftbungeecord/
+mkdir $HOME/AutoCraft/bungeecord/
 mkdir $HOME/AutoCraft/resources/jars/
 mkdir $HOME/AutoCraft/resources/spigot/
 mkdir $HOME/AutoCraft/resources/tmp/
 mkdir $HOME/AutoCraft/resources/servers/
 
-echo "Done"
+echo "Done!"
 echo "Cleaning up!"
 
 rm -r -rf $HOME/AutoCraft/.gitattributes

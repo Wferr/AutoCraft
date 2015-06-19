@@ -24,13 +24,13 @@ echo "Installing Nessicarry packages!"
 
 sudo apt-get install --assume-yes python-software-properties && git && tmux && htop && dialog
 
-echo "Done, Installing Java!"
+echo "Done! Installing Java!"
 
 sudo add-apt-repository ppa:webupd8team/java
 sudo apt-get update
 sudo apt-get --assume-yes install oracle-java8-installer
 
-echo "Done"
+echo "Done!"
 echo "Verifying Java Installation"
 
 #http://stackoverflow.com/a/7335524
@@ -83,7 +83,7 @@ mkdir $HOME/AutoCraft/resources/spigot/
 mkdir $HOME/AutoCraft/resources/tmp/
 mkdir $HOME/AutoCraft/resources/servers/
 
-echo "Done"
+echo "Done!"
 echo "Cleaning up!"
 
 rm -r -rf $HOME/AutoCraft/.gitattributes

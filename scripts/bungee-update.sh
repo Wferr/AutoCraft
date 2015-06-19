@@ -22,9 +22,9 @@ echo "BungeeCord is out of date! Copying over new BungeeCord!"
 rm $HOME/AutoCraft/resources/jars/BungeeCord.jar
 mv $HOME/AutoCraft/resources/tmp/BungeeCord.jar $HOME/AutoCraft/resources/jars/BungeeCord.jar
 
-echo "Done"
+echo "Done!"
 
 echo "Cleaning TMP directory"
 rm $HOME/AutoCraft/resources/tmp/BungeeCord.jar
 
-echo "Done"c 
+echo "Done!"

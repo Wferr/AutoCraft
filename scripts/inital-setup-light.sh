@@ -4,6 +4,7 @@ set -e
 
 echo "Creating Directories!"
 
+mkdir $HOME/AutoCraft/backups/
 mkdir $HOME/AutoCraft/backups/full/
 mkdir $HOME/bungeecord/
 mkdir $HOME/resources/jars/

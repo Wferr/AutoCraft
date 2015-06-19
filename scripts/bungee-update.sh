@@ -16,7 +16,7 @@ sleep 1
 MD5_1 = $(md5sum "$HOME/AutoCraft/resources/jars/BungeeCord.jar" | cut -d " " -f 1)
 MD5_2 = $(md5sum "$HOME/AutoCraft/resources/tmp/BungeeCord.jar" | cut -d " " -f 1)
 
-if [$MD5_1 == $MD5_2]
+if [MD5_1 == MD5_2]
 then
     echo "BungeeCord is running the most upto date version and needed no update-restart!"
     exit 1

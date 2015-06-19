@@ -8,8 +8,8 @@ if [ ! -f $HOME/AutoCraft/resources/spigot/BuildTools.jar ]; then
     wget https://hub.spigotmc.org/jenkins/job/BuildTools/lastSuccessfulBuild/artifact/target/BuildTools.jar
 fi
 
-MD5_1 = _$(md5sum ’$HOME/AutoCraft/resources/spigot/BuildTools.jar’ | cut -d ’ ’ -f 1)
-MD5_2 = _$(md5sum ’$HOME/AutoCraft/resources/tmp/BuildTools.jar | cut -d ’ ’ -f 1)
+MD5_1 = _$(md5sum "$HOME/AutoCraft/resources/spigot/BuildTools.jar" | cut -d " " -f 1)
+MD5_2 = _$(md5sum "$HOME/AutoCraft/resources/tmp/BuildTools.jar" | cut -d " " -f 1)
 
 if [$MD5_1 != $MD5_2]
 then

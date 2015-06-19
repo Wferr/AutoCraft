@@ -1,4 +1,5 @@
 #!/bin/bash
+set -e
 //Used to setup AutoCraft
 
 if [[ $EUID -ne 0 ]]; then
@@ -77,6 +78,12 @@ echo "Cleaning up!"
 
 rm -r -rf $HOME/AutoCraft/.gitattributes
 rm -r -rf $HOME/AutoCraft/.gitignore
+
+echo "Done!"
+
+echo "Changing Script permissions!"
+
+chmod 770 $HOME/AutoCraft/scripts/*
 
 echo "Done!"
 

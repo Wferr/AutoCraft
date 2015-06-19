@@ -12,13 +12,13 @@ fi
 cd $HOME/AutoCraft/resources/tmp/
 wget http://ci.md-5.net/job/BungeeCord/lastSuccessfulBuild/artifact/bootstrap/target/BungeeCord.jar
 
-MD5_1=$(md5sum "$HOME/AutoCraft/resources/jars/BungeeCord.jar" | cut -d " " -f 1)
-MD5_2=$(md5sum "$HOME/AutoCraft/resources/tmp/BungeeCord.jar" | cut -d " " -f 1)
+md5=$(md5sum "$HOME/AutoCraft/resources/jars/BungeeCord.jar" | cut -d " " -f 1)
+md52=$(md5sum "$HOME/AutoCraft/resources/tmp/BungeeCord.jar" | cut -d " " -f 1)
 
-echo "Old MD5 $(MD5_1)"
-echo "New MD5 $(MD5_2)"
+echo "Old MD5 $(md5)"
+echo "New MD5 $(md52)"
 
-if [ $MD5_1 == $MD5_2]
+if [ $md5 == $md52]
 then
     echo "BungeeCord is running the most upto date version and needed no update-restart!"
     exit 0

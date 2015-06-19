@@ -73,6 +73,15 @@ git clone http://github.com/Wferr/AutoCraft.git
 
 echo "Cloned!"
 
+echo "Creating Directories!"
+
+mkdir $HOME/AutoCraft/backups/full/
+mkdir $HOME/bungeecord/
+mkdir $HOME/resources/jars/
+mkdir $HOME/resources/spigot/
+mkdir $HOME/resources/tmp/
+mkdir $HOME/resources/servers/
+
 echo "Done"
 echo "Cleaning up!"
 

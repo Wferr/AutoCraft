@@ -6,11 +6,11 @@ echo "Creating Directories!"
 
 mkdir $HOME/AutoCraft/backups/
 mkdir $HOME/AutoCraft/backups/full/
-mkdir $HOME/bungeecord/
-mkdir $HOME/resources/jars/
-mkdir $HOME/resources/spigot/
-mkdir $HOME/resources/tmp/
-mkdir $HOME/resources/servers/
+mkdir $HOME/AutoCraftbungeecord/
+mkdir $HOME/AutoCraft/resources/jars/
+mkdir $HOME/AutoCraft/resources/spigot/
+mkdir $HOME/AutoCraft/resources/tmp/
+mkdir $HOME/AutoCraft/resources/servers/
 
 echo "Done"
 echo "Cleaning up!"

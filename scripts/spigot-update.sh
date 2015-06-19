@@ -30,7 +30,7 @@ MD5_2=$(md5sum "$HOME/AutoCraft/resources/tmp/BuildTools.jar" | cut -d " " -f 1)
 echo "Old MD5 $MD5_1"
 echo "New MD5 $MD5_2"
 
-if [$MD5_1 != $MD5_2]
+if [$MD5_1 != $MD5_2 ]
 then
     echo "BuildTools is out of date! Copying over new BuildTools!"
 

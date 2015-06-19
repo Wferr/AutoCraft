@@ -11,6 +11,7 @@ fi
 
 cd $HOME/AutoCraft/resources/tmp/
 wget http://ci.md-5.net/job/BungeeCord/lastSuccessfulBuild/artifact/bootstrap/target/BungeeCord.jar
+sleep 1
 
 MD5_1 = _$(md5sum "$HOME/AutoCraft/resources/jars/BungeeCord.jar" | cut -d " " -f 1)
 MD5_2 = _$(md5sum "$HOME/AutoCraft/resources/tmp/BungeeCord.jar" | cut -d " " -f 1)

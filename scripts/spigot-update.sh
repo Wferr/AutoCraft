@@ -37,8 +37,8 @@ java -jar BuildTools.jar --rev latest
 
 mv $HOME/AutoCraft/resources/spigot/spigot*.jar $HOME/AutoCraft/resources/tmp/Spigot.jar
 
-MD5_1 = _$(md5sum ’$HOME/AutoCraft/resources/jars/Spigot.jar’ | cut -d ’ ’ -f 1)
-MD5_2 = _$(md5sum ’$HOME/AutoCraft/resources/tmp/Spigot.jar | cut -d ’ ’ -f 1)
+MD5_1 = _$(md5sum "$HOME/AutoCraft/resources/jars/Spigot.jar" | cut -d " " -f 1)
+MD5_2 = _$(md5sum "$HOME/AutoCraft/resources/tmp/Spigot.jar" | cut -d " " -f 1)
 
 if [$MD5_1 != $MD5_2]
 then

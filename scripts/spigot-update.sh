@@ -24,8 +24,8 @@ fi
 cd $HOME/AutoCraft/resources/tmp/
 wget https://hub.spigotmc.org/jenkins/job/BuildTools/lastSuccessfulBuild/artifact/target/BuildTools.jar
 
-MD5_1 = $(md5sum "$HOME/AutoCraft/resources/spigot/BuildTools.jar" | cut -d " " -f 1)
-MD5_2 = $(md5sum "$HOME/AutoCraft/resources/tmp/BuildTools.jar" | cut -d " " -f 1)
+MD5_1=$(md5sum "$HOME/AutoCraft/resources/spigot/BuildTools.jar" | cut -d " " -f 1)
+MD5_2=$(md5sum "$HOME/AutoCraft/resources/tmp/BuildTools.jar" | cut -d " " -f 1)
 
 if [MD5_1 != MD5_2]
 then

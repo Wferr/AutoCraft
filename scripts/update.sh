@@ -6,7 +6,7 @@ set -e
 function update-both {
 sh $HOME/AutoCraft/scripts/bungee-update.sh
 sh $HOME/AutoCraft/scripts/spigot-update.sh
-}
+} >> $HOME/AutoCraft/tmp/update.log
 
 
 dialog --menu "Update Options" 10 60 20  1 Both 2 Spigot 3 Bungee 2>temp
@@ -19,7 +19,8 @@ then
  
         if [ "$_return" = "1" ]
         then
-                dialog --title "Updating Both" --msgbox "$(update-both)" 100 100
+        		update-both
+                dialog --title "Updating Both" --tailbox "$HOME/AutoCraft/tmp/update.log" 100 100
         fi
  
         if [ "$_return" = "2" ]

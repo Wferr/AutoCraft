@@ -22,7 +22,7 @@ sudo apt-get upgrade
 
 echo "Installing Nessicarry packages!"
 
-sudo apt-get install --assume-yes python-software-properties && git && tmux && htop
+sudo apt-get install --assume-yes python-software-properties && git && tmux && htop && dialog
 
 echo "Done, Installing Java!"
 

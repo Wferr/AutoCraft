@@ -21,6 +21,9 @@ echo "New MD5 $MD5_2"
 if [ $MD5_1 == $MD5_2 ]
 	then
 	echo "BungeeCord is running the most upto date version and needed no update-restart!"
+	echo "Cleaning TMP directory"
+	rm $HOME/AutoCraft/resources/tmp/BungeeCord.jar
+	echo "Done!"
 	exit 0
 fi
 

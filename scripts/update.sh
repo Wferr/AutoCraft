@@ -12,18 +12,21 @@ then
         	echo "Updating Both"
         	sh $HOME/AutoCraft/scripts/bungee-update.sh
 			sh $HOME/AutoCraft/scripts/spigot-update.sh
+            exit 0
         fi
  
         if [ "$_return" = "2" ]
         then
         	echo "Updating Spigot"
             sh $HOME/AutoCraft/scripts/spigot-update.sh
+            exit 0
         fi
  
         if [ "$_return" = "3" ]
         then
         	echo "Updating BungeeCord"
             sh $HOME/AutoCraft/scripts/bungee-update.sh
+            exit 0
         fi
  
 else

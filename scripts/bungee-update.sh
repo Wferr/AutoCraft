@@ -18,7 +18,7 @@ MD5_2=$(md5sum "$HOME/AutoCraft/resources/tmp/BungeeCord.jar" | cut -d " " -f 1)
 echo "Old MD5 $MD5_1"
 echo "New MD5 $MD5_2"
 
-if [[ $MD5_1 == "$MD5_2" ]]
+if [ $MD5_1 == $MD5_2 ]
 	then
 	echo "BungeeCord is running the most upto date version and needed no update-restart!"
 	exit 0

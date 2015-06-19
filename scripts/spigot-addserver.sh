@@ -1,8 +1,8 @@
 #!/bin/bash
 set -e
-//Used to add new spigot to AutoCraft
+#Used to add new spigot to AutoCraft
 
-//Used to set server port
+#Used to set server port
 function port-set {
 echo "Type the port of the server you want to add in a range from 25566~2600, followed by [ENTER]:"
 
@@ -19,7 +19,7 @@ sed -i 's/server-port=25565/server-port=$port/g' $HOME/AutoCraft/servers/$name/s
 echo "Done!"
 }
 
-//Used to set amount of ram
+#Used to set amount of ram
 function ram-set {
 echo "Type the amount of ram in MB that you want to give to the server in a range from 256~65536, followed by [ENTER]:"
 
@@ -98,7 +98,6 @@ echo "Done!"
 PS3='Please enter your choice for Spigot configs!: '
 options=("Option 1" "Option 2" "Option 3" "Custom")
 select opt in "${options[@]}"
-do
     case $opt in
         "Option 1: Minimal, no nether, end, mobs")
             echo "Minimal Install!"
@@ -107,6 +106,7 @@ do
             cp $HOME/AutoCraft/resources/configs/minimal/server.properties
             port-set
             ram-set
+            break
             ;;
         "Option 2: Less, no nether end")
             echo "Less Install!"
@@ -115,6 +115,7 @@ do
             cp $HOME/AutoCraft/resources/configs/less/server.properties
             port-set
             ram-set
+            break
             ;;
         "Option 3: Full")
             echo "Full Install!"
@@ -123,15 +124,16 @@ do
             cp $HOME/AutoCraft/resources/configs/full/server.properties
             port-set
             ram-set
+            break
             ;;
         "Option 3: Custom")
             echo "Custom Install!"
             echo "Please run start.sh to generate config files!"
             ram-set
+            break
             ;;
         *) echo invalid option;;
     esac
-done
 
 echo "Done!"
 

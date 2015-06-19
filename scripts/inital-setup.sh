@@ -1,14 +1,14 @@
 #!/bin/bash
 set -e
-//Used to setup AutoCraft
+#Used to setup AutoCraft
 
 if [[ $EUID -ne 0 ]]; then
-   echo "This script must be run as root" 1>&2
+   dialog --title 'Error' --msgbox 'Script must br run as root!' 5 60 1>&2
    exit 1
 fi
 
 if [ -f /home/AutoCraft ]; then
-    echo "AutoCraft has already been setup!"
+    dialog --title 'Error' --msgbox 'AutoCraft has already been setup!' 5 60
     exit 1
 fi
 
@@ -33,7 +33,7 @@ sudo apt-get --assume-yes install oracle-java8-installer
 echo "Done"
 echo "Verifying Java Installation"
 
-//http://stackoverflow.com/a/7335524
+#http://stackoverflow.com/a/7335524
 if type -p java; then
     echo found java executable in PATH
     _java=java
@@ -41,7 +41,7 @@ elif [[ -n "$JAVA_HOME" ]] && [[ -x "$JAVA_HOME/bin/java" ]];  then
     echo found java executable in JAVA_HOME     
     _java="$JAVA_HOME/bin/java"
 else
-    echo "Java Failed to install. Please install manually!"
+    dialog --title 'Error' --msgbox 'Java install failed! Install manually!' 5 60
     sleep 20
 fi
 
@@ -51,7 +51,7 @@ if [[ "$_java" ]]; then
     if [[ "$version" > "1.8" ]]; then
         echo "Java 8 is installed."
     else         
-        echo "Java is outdated! Please install manually!"
+        dialog --title 'Error' --msgbox 'Java is outdated Install manually!' 5 60
         sleep 20
     fi
 fi
@@ -75,12 +75,12 @@ echo "Cloned!"
 
 echo "Creating Directories!"
 
-mkdir $HOME/AutoCraft/backups/full/
-mkdir $HOME/bungeecord/
-mkdir $HOME/resources/jars/
-mkdir $HOME/resources/spigot/
-mkdir $HOME/resources/tmp/
-mkdir $HOME/resources/servers/
+mkdir /home/AutoCraft/backups/full/
+mkdir /home/bungeecord/
+mkdir /home/resources/jars/
+mkdir /home/resources/spigot/
+mkdir /home/resources/tmp/
+mkdir /home/resources/servers/
 
 echo "Done"
 echo "Cleaning up!"

@@ -1,6 +1,6 @@
 #!/bin/bash
 set -e
-//Used to Update BungeeCord Suite
+#Used to Update BungeeCord Suite
 
 if [ ! -f $HOME/AutoCraft/resources/jars/BungeeCord.jar ]; then
     echo "BungeeCord not found, Downloading!"

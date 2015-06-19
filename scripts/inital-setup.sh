@@ -7,7 +7,7 @@ if [[ $EUID -ne 0 ]]; then
    exit 1
 fi
 
-if [ -f /home/AutoCraft ]; then
+if [ -f /home/autocraft ]; then
     dialog --title 'Error' --msgbox 'AutoCraft has already been setup!' 5 60
     exit 1
 fi
@@ -59,13 +59,13 @@ fi
 echo "Done!"
 echo "Creating User!"
 
-sudo adduser AutoCraft --gecos "Auto Craft,1337,*,*" --disabled-password
-echo "AutoCraft:CraftingAwesomeness101" | sudo chpasswd
+sudo adduser autocraft --gecos "Auto Craft,1337,*,*" --disabled-password
+echo "autocraft:CraftingAwesomeness101" | sudo chpasswd
 
 echo "User Added!"
 echo "Switching User!"
 
-su AutoCraft
+su autocraft
 
 echo "Installing AutoCraft from Github!"
 
@@ -75,12 +75,12 @@ echo "Cloned!"
 
 echo "Creating Directories!"
 
-mkdir /home/AutoCraft/backups/full/
-mkdir /home/bungeecord/
-mkdir /home/resources/jars/
-mkdir /home/resources/spigot/
-mkdir /home/resources/tmp/
-mkdir /home/resources/servers/
+mkdir $HOME/AutoCraft/backups/full/
+mkdir $HOME/bungeecord/
+mkdir $HOME/resources/jars/
+mkdir $HOME/resources/spigot/
+mkdir $HOME/resources/tmp/
+mkdir $HOME/resources/servers/
 
 echo "Done"
 echo "Cleaning up!"

@@ -1,5 +1,4 @@
 #!/bin/bash
-set -e
 #Used to Update Spigot Suite
 
 if [ ! -f $HOME/AutoCraft/resources/spigot/BuildTools.jar ]; then

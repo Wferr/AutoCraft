@@ -6,6 +6,7 @@ if [ ! -f $HOME/AutoCraft/resources/jars/BungeeCord.jar ]; then
     echo "BungeeCord not found, Downloading!"
     cd $HOME/AutoCraft/resources/jars/
     wget http://ci.md-5.net/job/BungeeCord/lastSuccessfulBuild/artifact/bootstrap/target/BungeeCord.jar
+    cp $HOME/AutoCraft/resources/jars/BungeeCord.jar $HOME/AutoCraft/bungeecord/BungeeCord.jar
 fi
 
 cd $HOME/AutoCraft/resources/tmp/

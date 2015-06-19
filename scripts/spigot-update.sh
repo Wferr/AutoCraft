@@ -1,11 +1,24 @@
 #!/bin/bash
+set -e
 #Used to Update Spigot Suite
+
+function compile-spigot {
+echo "Creating Spigot!"
+
+cd $HOME/AutoCraft/resources/spigot
+
+git config --global --unset core.autocrlf
+java -jar BuildTools.jar --rev latest
+}
 
 if [ ! -f $HOME/AutoCraft/resources/spigot/BuildTools.jar ]; then
     echo "BuildTools not found, Downloading!"
     cd $HOME/AutoCraft/resources/spigot/
     wget https://hub.spigotmc.org/jenkins/job/BuildTools/lastSuccessfulBuild/artifact/target/BuildTools.jar
     echo 'Done!'
+    compile-spigot
+    mv $HOME/AutoCraft/resources/spigot/spigot*.jar $HOME/AutoCraft/resources/jars/Spigot.jar
+
 fi
 
 cd $HOME/AutoCraft/resources/tmp/
@@ -30,12 +43,6 @@ then
     
 fi
 
-echo "Creating Spigot!"
-
-cd $HOME/AutoCraft/resources/spigot
-
-git config --global --unset core.autocrlf
-java -jar BuildTools.jar --rev latest
 
 mv $HOME/AutoCraft/resources/spigot/spigot*.jar $HOME/AutoCraft/resources/tmp/Spigot.jar
 

@@ -1,11 +1,11 @@
 #!/bin/bash
 set -e
 
-dialog --menu "Update Options" 10 60 20  1 Both 2 Spigot 3 Bungee 2>temp
+dialog --menu "Update Options" 10 60 20  1 Both 2 Spigot 3 Bungee 2>$HOME/AutoCraft/resources/tmp/update.tmp
  
 if [ "$?" = "0" ]
 then
-        _return=$(cat temp)
+        _return=$(cat $HOME/AutoCraft/resources/tmp/update.tmp)
  
         if [ "$_return" = "1" ]
         then
@@ -30,4 +30,4 @@ else
         echo "Cancled"
 fi
 
-rm -f temp
+rm -f $HOME/AutoCraft/resources/tmp/update.tmp

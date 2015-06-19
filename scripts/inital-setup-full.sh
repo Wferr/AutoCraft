@@ -1,6 +1,6 @@
 #!/bin/bash
 set -e
-#Used to setup AutoCraft
+#Full Install from new linux install
 
 if [[ $EUID -ne 0 ]]; then
    dialog --title 'Error' --msgbox 'Script must br run as root!' 5 60 1>&2

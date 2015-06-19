@@ -22,13 +22,13 @@ options=("Option 1" "Option 2" "Option 3" "Quit")
 select opt in "${options[@]}"
 do
     case $opt in
-        "Option 1")
+        "Option 1: Add Server")
             echo "you chose choice 1"
             ;;
-        "Option 2")
+        "Option 2: Delete Server")
             echo "you chose choice 2"
             ;;
-        "Option 3")
+        "Option 3: Update")
             echo "you chose choice 3"
             ;;
         "Quit")

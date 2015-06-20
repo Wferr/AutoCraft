@@ -40,11 +40,16 @@ then
 
 	echo "Done!"
 
-	echo "Cleaning TMP directory"
+	echo "Cleaning TMP directory!"
 	rm $HOME/AutoCraft/resources/tmp/BuildTools.jar
 
 	echo "Done!"
-    
+else
+	echo "BuildTools is up to date!"
+	echo "Cleaning TMP directory!"
+	rm $HOME/AutoCraft/resources/tmp/BuildTools.jar
+
+	echo "Done!"    
 fi
 
 compile-spigot

@@ -57,9 +57,15 @@ if [ ! -f $HOME/AutoCraft/resources/jars/Spigot.jar ]; then
     exit 1
 fi
 
-echo "Type the name of the server you want to add, followed by [ENTER]:"
+name=$(dialog --title "Name of the server to add." --inputbox "What the name of the server?" 10 60 survival 3>&1 1>&2 2>&3)
 
-read name
+exitstatus=$?
+if [ $exitstatus = 0 ]; then
+    echo "Your server name is:" $name
+else
+    echo "Exiting"
+    exit 0
+fi
 
 if [ -f $HOME/AutoCraft/servers/$name ]; then
     echo "Server Already Exists!"
@@ -68,19 +74,15 @@ if [ -f $HOME/AutoCraft/servers/$name ]; then
 fi
 
 if [ ! -f $HOME/AutoCraft/resources/config/eula.txt ]; then
-    echo "EULA has not been accepted!"
-    echo "By responding yes you are indicating your agreement to our EULA (https://account.mojang.com/documents/minecraft_eula)"
-    read -p "Continue (y/n)?" choice
-    case "$choice" in 
-        [yY][eE][sS]  ) echo "YES";;
-        [nN][oO]  ) echo "Did not agree!" $$ exit 1;;
-        * ) echo "Invalid Choice!";;
-    esac
-
-    echo "Adding eula.txt"
-    echo "eula=true" > $HOME/AutoCraft/resources/configs/eula.txt
-    echo "Done!"
-
+	if (dialog --title "EULA" --yesno "By responding yes you are indicating your agreement to our EULA (https://account.mojang.com/documents/minecraft_eula)" 10 60) then
+    	echo "You chose Yes. Agreeing to EULA."
+    	echo "Adding eula.txt"
+    	echo "eula=true" > $HOME/AutoCraft/resources/configs/eula.txt
+    	echo "Done!"
+	else
+    	echo "You chose to not agree!"
+    	exit 1
+	fi
 fi
 
 echo "Createing Server Directory"

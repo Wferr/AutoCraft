@@ -3,12 +3,6 @@ set -e
 
 #Controller script
 
-source $HOME/AutoCraft/scripts/update.sh
-source $HOME/AutoCraft/scripts/backup.sh
-
-
-#Controller script
-
 echo "Reading config!"
 
 source $HOME/AutoCraft/resources/config.conf
@@ -16,21 +10,32 @@ source $HOME/AutoCraft/resources/config.conf
 echo "AutoCraft Controller Software version: $controller-version!"
 echo "AutoCraft Config Version: $config-version !"
 echo "AutoCraft Spigot-Config Version: $spigot-config-version !"
-sleep 1
+sleep 5
 
 PS3='Please enter your choice: '
-options=("Option 1" "Option 2" "Option 3" "Quit")
+options=("Update Jars" "Add Server" "Delete Server" "Backup Server" "Quit")
 select opt in "${options[@]}"
 do
     case $opt in
-        "Option 1: Add Server")
-            echo "you chose choice 1"
+        "Update Jars")
+            echo "Updating Jars!"
+            sh $HOME/AutoCraft/scripts/update.sh
+            break
             ;;
-        "Option 2: Delete Server")
-            echo "you chose choice 2"
+        "Add Server")
+            echo "Adding Server!"
+            sh $HOME/AutoCraft/scripts/spigot-addserver.sh
+            break
             ;;
-        "Option 3: Update")
-            echo "you chose choice 3"
+        "Delete Server")
+            echo "Deleting Server!"
+            sh $HOME/AutoCraft/scripts/spigot-removeserver.sh
+            break
+            ;;
+        "Backup Server")
+            echo "Backing up Server!"
+            sh $HOME/AutoCraft/scripts/backup.sh
+            break
             ;;
         "Quit")
             break

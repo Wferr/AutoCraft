@@ -98,11 +98,11 @@ cp $HOME/AutoCraft/resources/jars/Spigot.jar $HOME/AutoCraft/servers/$name/Spigo
 echo "Done!"
 
 PS3='Please enter your choice for Spigot configs!: '
-options=("Option 1" "Option 2" "Option 3" "Custom")
+options=("Minimal, no nether, end, mobs" "Less, no nether end" "Full" "Custom")
 select opt in "${options[@]}"
 do
     case $opt in
-        "Option 1: Minimal, no nether, end, mobs")
+        "Minimal, no nether, end, mobs")
             echo "Minimal Install!"
             cp $HOME/AutoCraft/resources/configs/minimal/spigot.yml
             cp $HOME/AutoCraft/resources/configs/minimal/bukkit.yml
@@ -111,7 +111,7 @@ do
             ram-set
             break
             ;;
-        "Option 2: Less, no nether end")
+        "Less, no nether end")
             echo "Less Install!"
             cp $HOME/AutoCraft/resources/configs/less/spigot.yml
             cp $HOME/AutoCraft/resources/configs/less/bukkit.yml
@@ -120,7 +120,7 @@ do
             ram-set
             break
             ;;
-        "Option 3: Full")
+        "Full")
             echo "Full Install!"
             cp $HOME/AutoCraft/resources/configs/full/spigot.yml
             cp $HOME/AutoCraft/resources/configs/full/bukkit.yml
@@ -129,7 +129,7 @@ do
             ram-set
             break
             ;;
-        "Option 3: Custom")
+        "Custom")
             echo "Custom Install!"
             echo "Please run start.sh to generate config files!"
             ram-set

@@ -10,7 +10,7 @@ mkdir $HOME/AutoCraft/bungeecord/
 mkdir $HOME/AutoCraft/resources/jars/
 mkdir $HOME/AutoCraft/resources/spigot/
 mkdir $HOME/AutoCraft/resources/tmp/
-mkdir $HOME/AutoCraft/resources/servers/
+mkdir $HOME/AutoCraft/servers/
 
 echo "Done!"
 echo "Cleaning up!"

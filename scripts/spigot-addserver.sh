@@ -73,7 +73,7 @@ if [ -f $HOME/AutoCraft/servers/$name ]; then
     exit 1
 fi
 
-if [ ! -f $HOME/AutoCraft/resources/config/eula.txt ]; then
+if [ ! -f $HOME/AutoCraft/resources/configs/eula.txt ]; then
 	if (dialog --title "EULA" --yesno "By responding yes you are indicating your agreement to our EULA (https://account.mojang.com/documents/minecraft_eula)" 10 60) then
     	echo "You chose Yes. Agreeing to EULA."
     	echo "Adding eula.txt"
@@ -100,6 +100,7 @@ echo "Done!"
 PS3='Please enter your choice for Spigot configs!: '
 options=("Option 1" "Option 2" "Option 3" "Custom")
 select opt in "${options[@]}"
+do
     case $opt in
         "Option 1: Minimal, no nether, end, mobs")
             echo "Minimal Install!"
@@ -136,6 +137,7 @@ select opt in "${options[@]}"
             ;;
         *) echo invalid option;;
     esac
+done
 
 echo "Done!"
 

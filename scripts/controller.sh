@@ -9,7 +9,7 @@ source $HOME/AutoCraft/resources/config.conf
 
 echo "AutoCraft Controller Software version: $controller-version!"
 echo "AutoCraft Config Version: $config-version !"
-echo "AutoCraft Spigot-Config Version: $spigot-config-version !"
+echo "AutoCraft Updater Version: $updater-version !"
 sleep 5
 
 PS3='Please enter your choice: '

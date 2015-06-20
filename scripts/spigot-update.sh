@@ -64,7 +64,12 @@ if [ $MD52_1 != $MD52_2 ]
 then
     echo "Spigot is out of date! Copying over new Spigot!"
 
-	rm $Home/AutoCraft/resources/jars/Spigot.jar
+    if [ -f $HOME/AutoCraft/resources/jars/Spigot.jar ]
+    	then
+    	echo "Old Spigot Found. Deleteing!"
+		rm $Home/AutoCraft/resources/jars/Spigot.jar
+		echo "Done!"
+	fi
 	mv $HOME/AutoCraft/resources/tmp/Spigot.jar $HOME/AutoCraft/resources/jars/Spigot.jar
 
 	echo "Done"

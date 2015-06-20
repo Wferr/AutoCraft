@@ -8,5 +8,7 @@ add readme
 		SPIGOT
 		TMP
 	SCRIPTS
+		UPDATE
+			finish handleing for updates
 		finish spigot-update
 	SERVERS

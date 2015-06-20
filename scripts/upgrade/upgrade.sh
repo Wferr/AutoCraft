@@ -1,4 +1,5 @@
 #!/bin/bash
+set -e
 #Used to upgrade AutoCraft Scripts
 
 
@@ -52,8 +53,14 @@ echo "Copying Changed Scripts!"
 
 for line in $(cat $HOME/AutoCraft/resources/tmp/AutoCraft/scripts/)
 do
-	rm $line
-	cp $HOME/AutoCraft/resources/tmp/
+	rm $($HOME/AutoCraft/$line)
+	cp $($HOME/AutoCraft/resources/tmp/AutoCraft/$line) $($HOME/AutoCraft/$line)
 done
 
+echo "Done Copying Scripts!"
+
+echo "Running Patch!"
+sh $HOME/AutoCraft/scripts/upgrade/patch.sh
+
 echo "Done!"
+echo "Please visit GitHub to see the changelog!"

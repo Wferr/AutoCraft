@@ -7,7 +7,8 @@ echo "Creating Spigot!"
 
 cd $HOME/AutoCraft/resources/spigot
 
-git config --global --unset core.autocrlf
+#Disableing git config for now.. Causes issues?
+#git config --global --unset core.autocrlf
 java -jar BuildTools.jar --rev latest
 }
 
@@ -56,8 +57,8 @@ compile-spigot
 
 mv $HOME/AutoCraft/resources/spigot/spigot*.jar $HOME/AutoCraft/resources/tmp/Spigot.jar
 
-MD5_1 = _$(md5sum "$HOME/AutoCraft/resources/jars/Spigot.jar" | cut -d " " -f 1)
-MD5_2 = _$(md5sum "$HOME/AutoCraft/resources/tmp/Spigot.jar" | cut -d " " -f 1)
+MD5_1=$(md5sum "$HOME/AutoCraft/resources/jars/Spigot.jar" | cut -d " " -f 1)
+MD5_2=$(md5sum "$HOME/AutoCraft/resources/tmp/Spigot.jar" | cut -d " " -f 1)
 
 if [ $MD5_1 != $MD5_2]
 then

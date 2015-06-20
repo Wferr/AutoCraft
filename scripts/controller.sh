@@ -16,6 +16,7 @@ source $HOME/AutoCraft/resources/config.conf
 echo "AutoCraft Controller Software version: $controller-version!"
 echo "AutoCraft Config Version: $config-version !"
 echo "AutoCraft Spigot-Config Version: $spigot-config-version !"
+sleep 1
 
 PS3='Please enter your choice: '
 options=("Option 1" "Option 2" "Option 3" "Quit")

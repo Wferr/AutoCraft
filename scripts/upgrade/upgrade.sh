@@ -62,5 +62,12 @@ echo "Done Copying Scripts!"
 echo "Running Patch!"
 sh $HOME/AutoCraft/scripts/upgrade/patch.sh
 
+echo "Reding Config!"
+source $HOME/AutoCraft/resources/config.conf
+
+echo "AutoCraft Controller Software version: $controller-version !"
+echo "AutoCraft Config Version: $config-version !"
+echo "AutoCraft Updater Version: $updater-version !"
+
 echo "Done!"
 echo "Please visit GitHub to see the changelog!"

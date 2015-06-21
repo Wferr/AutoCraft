@@ -77,7 +77,8 @@ echo "Creating Directories!"
 
 mkdir $HOME/AutoCraft/backups/
 mkdir $HOME/AutoCraft/backups/full/
-mkdir $HOME/AutoCraftbungeecord/
+mkdir $HOME/AutoCraft/backups/servers
+mkdir $HOME/AutoCraft/bungeecord/
 mkdir $HOME/AutoCraft/resources/jars/
 mkdir $HOME/AutoCraft/resources/spigot/
 mkdir $HOME/AutoCraft/resources/tmp/

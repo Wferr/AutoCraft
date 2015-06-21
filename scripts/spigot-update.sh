@@ -20,7 +20,6 @@ if [ ! -f $HOME/AutoCraft/resources/spigot/BuildTools.jar ]
     echo 'Done!'
     compile-spigot
     mv $HOME/AutoCraft/resources/spigot/spigot*.jar $HOME/AutoCraft/resources/jars/Spigot.jar
-
 fi
 
 cd $HOME/AutoCraft/resources/tmp/

@@ -2,6 +2,10 @@
 set -e
 
 #Backup Controller Script
+set -e
+
+#format of file name
+NOW=$(date +"%m-%d-%y")
 
 function full-backup {
 	echo "Preforming Full Backup!"
@@ -12,6 +16,7 @@ function full-backup {
 
 function server-backup {
 	echo "Server Backup!"
+    tar cvzf $HOME/AutoCraft/backups/server/$NOW.tar.gz $HOME/AutoCraft/Servers
 	
 }
 

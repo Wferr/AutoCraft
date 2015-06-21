@@ -5,7 +5,6 @@ set -e
 
 echo "WARNING: UPGRADE IS IN TESTING STILL AND MAY CAUSE LOSS OF DATA"
 echo "PLEASE PLEASE PLEASE BACKUP!"
-echo "Reading config!"
 sleep 10
 
 echo "AutoCraft Updater"

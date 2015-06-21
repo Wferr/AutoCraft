@@ -1,4 +1,5 @@
 #!/bin/bash
+#used to do a quick reinstall of AutoCraft
 set -e
 
 rm -r -rf $HOME/AutoCraft/

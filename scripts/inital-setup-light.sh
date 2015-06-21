@@ -23,7 +23,7 @@ echo "Done!"
 
 echo "Changing Script permissions!"
 
-chmod 770 $HOME/AutoCraft/scripts/*
+chmod 770 $HOME/AutoCraft/scripts/* -R
 
 echo "Done!"
 

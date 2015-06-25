@@ -20,7 +20,7 @@ function server-backup {
 	
 }
 
-dialog --menu "Backup Options" 10 60 20  1 Full 2 Servers 3 AutoCraft 2>$HOME/AutoCraft/resources/tmp/backup.tmp
+dialog --menu "Backup Options" 10 60 20  1 Full 2 Servers 2>$HOME/AutoCraft/resources/tmp/backup.tmp
  
 if [ "$?" = "0" ]
 then
@@ -36,17 +36,9 @@ then
         if [ "$_return" = "2" ]
         then
         	echo "Server Backup"
-            sh $HOME/AutoCraft/scripts/spigot-update.sh
+            server-backup
             exit 0
         fi
- 
-        if [ "$_return" = "3" ]
-        then
-        	echo "Updating BungeeCord"
-            sh $HOME/AutoCraft/scripts/bungee-update.sh
-            exit 0
-        fi
- 
 else
         echo "Cancled"
 fi

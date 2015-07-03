@@ -24,7 +24,7 @@ if [ $MD5_1 == $MD5_2 ]
 	echo "Cleaning TMP directory"
 	rm $HOME/AutoCraft/resources/tmp/BungeeCord.jar
 	echo "Done!"
-	break
+	exit
 fi
 
 echo "BungeeCord is out of date! Copying over new BungeeCord!"

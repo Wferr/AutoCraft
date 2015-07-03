@@ -3,12 +3,10 @@ add readme
 	BUNGEECORD
 	RESOURCES
 		CONFIGS
-			add minimal less and full configs
 		JARS
 		SPIGOT
 		TMP
 	SCRIPTS
 		UPDATE
-			finish handleing for updates
-		finish spigot-update
+		run spigot update in the background.. it takes a while..
 	SERVERS

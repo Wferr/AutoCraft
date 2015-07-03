@@ -111,27 +111,27 @@ do
     case $opt in
         "Minimal, no nether, end, mobs")
             echo "Minimal Install!"
-            cp $HOME/AutoCraft/resources/configs/minimal/spigot.yml
-            cp $HOME/AutoCraft/resources/configs/minimal/bukkit.yml
-            cp $HOME/AutoCraft/resources/configs/minimal/server.properties
+            cp $HOME/AutoCraft/resources/configs/minimal/spigot.yml $HOME/AutoCraft/servers/$name/spigot.yml
+            cp $HOME/AutoCraft/resources/configs/minimal/bukkit.yml $HOME/AutoCraft/servers/$name/bukkit.yml
+            cp $HOME/AutoCraft/resources/configs/minimal/server.properties $HOME/AutoCraft/servers/$name/server.properties
             port-set
             ram-set
             break
             ;;
         "Less, no nether end")
             echo "Less Install!"
-            cp $HOME/AutoCraft/resources/configs/less/spigot.yml
-            cp $HOME/AutoCraft/resources/configs/less/bukkit.yml
-            cp $HOME/AutoCraft/resources/configs/less/server.properties
+            cp $HOME/AutoCraft/resources/configs/less/spigot.yml $HOME/AutoCraft/servers/$name/spigot.yml
+            cp $HOME/AutoCraft/resources/configs/less/bukkit.yml $HOME/AutoCraft/servers/$name/bukkit.yml
+            cp $HOME/AutoCraft/resources/configs/less/server.properties $HOME/AutoCraft/servers/$name/server.properties
             port-set
             ram-set
             break
             ;;
         "Full")
             echo "Full Install!"
-            cp $HOME/AutoCraft/resources/configs/full/spigot.yml
-            cp $HOME/AutoCraft/resources/configs/full/bukkit.yml
-            cp $HOME/AutoCraft/resources/configs/full/server.properties
+            cp $HOME/AutoCraft/resources/configs/full/spigot.yml $HOME/AutoCraft/servers/$name/spigot.yml
+            cp $HOME/AutoCraft/resources/configs/full/bukkit.yml $HOME/AutoCraft/servers/$name/bukkit.yml
+            cp $HOME/AutoCraft/resources/configs/full/server.properties $HOME/AutoCraft/servers/$name/server.properties
             port-set
             ram-set
             break

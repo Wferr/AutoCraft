@@ -1,5 +1,4 @@
 #!/bin/bash
-set -e
 #Used to Update Spigot Suite
 
 function compile-spigot {
@@ -74,7 +73,7 @@ then
 	echo "Done"
 
 	echo "Cleaning TMP directory"
-	rm $HOME/AutoCraft/resources/tmp/Spigot.jar
+	rm -r -rf $HOME/AutoCraft/resources/tmp/*
 
 	echo "Done"
 

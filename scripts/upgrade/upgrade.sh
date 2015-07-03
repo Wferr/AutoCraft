@@ -14,9 +14,9 @@ read -p "Press any Key to continue with upgrade!"
 echo "Reding Config!"
 source $HOME/AutoCraft/resources/config.conf
 
-echo "AutoCraft Controller Software version: $controller-version !"
-echo "AutoCraft Config Version: $config-version !"
-echo "AutoCraft Updater Version: $updater-version !"
+echo "AutoCraft Controller Software version: $controller_version !"
+echo "AutoCraft Config Version: $config_version !"
+echo "AutoCraft Updater Version: $updater_version !"
 
 echo "Done!"
 echo "Checking for updates!"

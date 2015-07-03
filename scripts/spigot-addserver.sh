@@ -51,6 +51,13 @@ done" > $HOME/AutoCraft/server/$name/start.sh
 echo "Done!"
 }
 
+echo "Reding Config!"
+source $HOME/AutoCraft/resources/config.conf
+
+echo "AutoCraft Controller Software version: $controller_version !"
+echo "AutoCraft Config Version: $config_version !"
+echo "AutoCraft Updater Version: $updater_version !"
+
 if [ ! -f $HOME/AutoCraft/resources/jars/Spigot.jar ]; then
     echo "Spigot.jar does not exist!"
     echo "Please run update.sh!"

@@ -7,9 +7,9 @@ echo "Reading config!"
 
 source $HOME/AutoCraft/resources/config.conf
 
-echo "AutoCraft Controller Software version: $controller-version!"
-echo "AutoCraft Config Version: $config-version !"
-echo "AutoCraft Updater Version: $updater-version !"
+echo "AutoCraft Controller Software version: $controller_version!"
+echo "AutoCraft Config Version: $config_version !"
+echo "AutoCraft Updater Version: $updater_version !"
 sleep 5
 
 PS3='Please enter your choice: '

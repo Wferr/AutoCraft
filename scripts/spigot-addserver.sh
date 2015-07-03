@@ -14,7 +14,7 @@ done
 
 echo "Using port $port"
 
-sed -i 's/server-port=25565/server-port=$port/g' $HOME/AutoCraft/servers/$name/server.properties
+sed -i "s/server-port=25565/server-port=" + $port +"/g" $HOME/AutoCraft/servers/$name/server.properties
 
 echo "Done!"
 }
@@ -31,22 +31,10 @@ done
 
 echo "Using $ram MB of ram!"
 
-echo "while :
-do
-java -Xmx$ram -jar spigot.jar
+cp $HOME/AutoCraft/resources/configs/start.sh $HOME/AutoCraft/server/$name/start.sh
+sed -i "s/ram/java -Xmx " + $ram + "mb -jar spigot.jar/g" $HOME/AutoCraft/servers/$name/server.properties
 
-echo 'Restarting in 5'
-sleep 1
-echo 'Restarting in 4'
-sleep 1
-echo 'Restarting in 3'
-sleep 1
-echo 'Restarting in 2'
-sleep 1
-echo 'Restarting in 1'
-sleep 1
-
-done" >> $HOME/AutoCraft/server/$name/start.sh
+ $HOME/AutoCraft/server/$name/start.sh
 
 echo "Done!"
 }

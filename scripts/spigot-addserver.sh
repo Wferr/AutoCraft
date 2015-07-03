@@ -33,7 +33,7 @@ echo "Using $ram MB of ram!"
 
 echo "while :
 do
-java -Xmx$ramM -jar spigot.jar
+java -Xmx$ram -jar spigot.jar
 
 echo 'Restarting in 5'
 sleep 1
@@ -46,7 +46,7 @@ sleep 1
 echo 'Restarting in 1'
 sleep 1
 
-done" > $HOME/AutoCraft/server/$name/start.sh
+done" >> $HOME/AutoCraft/server/$name/start.sh
 
 echo "Done!"
 }

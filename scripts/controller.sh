@@ -19,22 +19,22 @@ do
     case $opt in
         "Update Jars")
             echo "Updating Jars!"
-            ./$HOME/AutoCraft/scripts/update.sh
+            /$HOME/AutoCraft/scripts/update.sh
             break
             ;;
         "Add Server")
             echo "Adding Server!"
-            ./$HOME/AutoCraft/scripts/spigot-addserver.sh
+            /$HOME/AutoCraft/scripts/spigot-addserver.sh
             break
             ;;
         "Delete Server")
             echo "Deleting Server!"
-            ./$HOME/AutoCraft/scripts/spigot-removeserver.sh
+            /$HOME/AutoCraft/scripts/spigot-removeserver.sh
             break
             ;;
         "Backup Server")
             echo "Backing up Server!"
-            ./$HOME/AutoCraft/scripts/backup.sh
+            /$HOME/AutoCraft/scripts/backup.sh
             break
             ;;
         "Quit")

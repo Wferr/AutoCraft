@@ -10,22 +10,22 @@ then
         if [ "$_return" = "1" ]
         then
         	echo "Updating Both"
-        	./$HOME/AutoCraft/scripts/bungee-update.sh
-			./$HOME/AutoCraft/scripts/spigot-update.sh
+        	/$HOME/AutoCraft/scripts/bungee-update.sh
+			/$HOME/AutoCraft/scripts/spigot-update.sh
             exit 0
         fi
  
         if [ "$_return" = "2" ]
         then
         	echo "Updating Spigot"
-            ./$HOME/AutoCraft/scripts/spigot-update.sh
+            /$HOME/AutoCraft/scripts/spigot-update.sh
             exit 0
         fi
  
         if [ "$_return" = "3" ]
         then
         	echo "Updating BungeeCord"
-            ./$HOME/AutoCraft/scripts/bungee-update.sh
+            /$HOME/AutoCraft/scripts/bungee-update.sh
             exit 0
         fi
  

@@ -37,3 +37,4 @@ do
 	if [ $count ]
     echo "Starting $d"
 done
+echo "Done!"

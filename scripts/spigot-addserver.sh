@@ -10,9 +10,9 @@ unset port
 while [[ ! ${port} =~ ^[0-9]+$ ]]; do
     read port
 
-    if [ "$(find $HOME/AutoCraft/servers/ -type d -name "*$port" -print)" = 1 ]; then
+    if test -n "$(find $HOME/AutoCraft/servers/ -type d -name "*$port")"; then
         echo "Server already using that port!"
-        echo "Please choose a diffrent port!"
+        echo "Please choose a diffrent port in a range from 25566~2600, followed by [ENTER]:"
         unset port
     fi
 

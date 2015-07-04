@@ -31,7 +31,7 @@ done
 
 echo "Using $ram MB of ram!"
 
-cp $HOME/AutoCraft/resources/configs/start.sh $HOME/AutoCraft/server/$name/start.sh
+cp $HOME/AutoCraft/resources/configs/start.sh $HOME/AutoCraft/servers/$name/start.sh
 sed -i "s/ram/java -Xmx "$ram"mb -jar spigot.jar/g" $HOME/AutoCraft/servers/$name/server.properties
 
  $HOME/AutoCraft/server/$name/start.sh

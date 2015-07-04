@@ -8,5 +8,6 @@ add readme
 		TMP
 	SCRIPTS
 		UPDATE
+			instead of looking at a changed file just compare md5's of every file? if file doesnt have one to compare to, copy it over!
 		run spigot update in the background.. it takes a while..
 	SERVERS

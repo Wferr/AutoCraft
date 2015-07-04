@@ -141,6 +141,15 @@ done
 
 echo "Done!"
 
+if (dialog --title "Plugins" --yesno "Do you want to copy over preconfigured plugins from /resources/plugins?" 10 60) then
+    echo "You chose Yes. Copying over plugins!"
+    cp $HOME/AutoCraft/resources/plugins/ $HOME/AutoCraft/servers/$name/plugins/
+    echo "Done!"
+    else
+    echo "Not transfering plugins!"
+    break
+fi
+
 echo "Appending port to Directory!"
 
 mv $HOME/AutoCraft/servers/$name $HOME/AutoCraft/servers/"$name"_"$port"

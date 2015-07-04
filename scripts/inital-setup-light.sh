@@ -28,5 +28,10 @@ chmod 770 $HOME/AutoCraft/scripts/* -R
 
 echo "Done!"
 
+echo "Building/Installing Jars!"
+
+/$HOME/AutoCraft/scripts/bungee-update.sh
+/$HOME/AutoCraft/scripts/spigot-update.sh
+
 echo "Install finished!"
 echo "Enjoy AutoCraft!"

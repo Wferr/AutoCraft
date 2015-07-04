@@ -67,12 +67,6 @@ else
     exit 0
 fi
 
-if [ -f $HOME/AutoCraft/servers/$name ]; then
-    echo "Server Already Exists!"
-    echo "To reset that server please run spigot-delete.sh then spigot-addserver.sh"
-    exit 1
-fi
-
 if [ ! -f $HOME/AutoCraft/resources/configs/eula.txt ]; then
 	if (dialog --title "EULA" --yesno "By responding yes you are indicating your agreement to our EULA (https://account.mojang.com/documents/minecraft_eula)" 10 60) then
     	echo "You chose Yes. Agreeing to EULA."
@@ -143,7 +137,8 @@ echo "Done!"
 
 if (dialog --title "Plugins" --yesno "Do you want to copy over preconfigured plugins from /resources/plugins?" 10 60) then
     echo "You chose Yes. Copying over plugins!"
-    cp $HOME/AutoCraft/resources/plugins/ $HOME/AutoCraft/servers/$name/plugins/
+    mkdir $HOME/AutoCraft/servers/$name/plugins/
+    cp $HOME/AutoCraft/resources/plugins/* $HOME/AutoCraft/servers/$name/plugins/
     echo "Done!"
     else
     echo "Not transfering plugins!"

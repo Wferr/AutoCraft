@@ -18,11 +18,11 @@ tmux split-window -v
 echo "Done!"
 
 echo "Starting BungeeCord!"
-tmux send -t AutoCraft:0 ./$HOME/AutoCraft/bungeecord/start.sh ENTER
+tmux send -t AutoCraft:0.0 ./$HOME/AutoCraft/bungeecord/start.sh ENTER
 echo "Done!"
 
 echo "Starting HTOP!"
-tmux send -t AutoCraft:1 HTOP ENTER
+tmux send -t AutoCraft:0.1 HTOP ENTER
 echo "Done!"
 
 echo "Creating New Window!"

@@ -9,6 +9,12 @@ echo "Type the port of the server you want to add in a range from 25566~2600, fo
 unset port
 while [[ ! ${port} =~ ^[0-9]+$ ]]; do
     read port
+
+    if [ "$(find $HOME/AutoCraft/servers/ -type d -name "*$port" -print)" = 1 ]
+        echo "Server already using that port!"
+        echo "Please choose a diffrent port!"
+        unset port
+    fi
     ! [[ ${port} -ge 25566 && ${port} -le 26000  ]] && unset port
 done
 
@@ -33,8 +39,6 @@ echo "Using $ram MB of ram!"
 
 cp $HOME/AutoCraft/resources/configs/start.sh $HOME/AutoCraft/servers/$name/start.sh
 sed -i "s/ram/java -Xmx "$ram"mb -jar spigot.jar/g" $HOME/AutoCraft/servers/$name/server.properties
-
- $HOME/AutoCraft/server/$name/start.sh
 
 echo "Done!"
 }
@@ -136,5 +140,9 @@ done
 
 echo "Done!"
 
+echo "Appending port to Directory!"
+
+mv $HOME/AutoCraft/servers/$name $HOME/AutoCraft/servers/"$name"_"$port"
+echo "Done!"
 
 echo "Server has finished installing!"

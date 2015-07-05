@@ -52,3 +52,5 @@ sleep 10
 end
 
 echo "Generated!"
+
+echo "Done!"

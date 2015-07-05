@@ -13,6 +13,7 @@ mkdir $HOME/AutoCraft/resources/spigot/
 mkdir $HOME/AutoCraft/resources/tmp/
 mkdir $HOME/AutoCraft/resources/plugins/
 mkdir $HOME/AutoCraft/servers/
+mkdir $HOME/AutoCraft/logs/
 
 echo "Done!"
 echo "Cleaning up!"
@@ -32,6 +33,7 @@ echo "Building/Installing Jars!"
 
 /$HOME/AutoCraft/scripts/bungee-update.sh
 /$HOME/AutoCraft/scripts/spigot-update.sh
+/$HOME/AutoCraft/scriptps/bungee-setup.sh
 
 echo "Install finished!"
 echo "Enjoy AutoCraft!"

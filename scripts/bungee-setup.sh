@@ -46,11 +46,8 @@ echo "Done!"
 
 echo "Starting up to generate configs!"
 
-java -jar $HOME/AutoCraft/bungeecord/BungeeCord.jar -DIReallyKnowWhatIAmDoingISwear
-
-sleep 15
-
-end
+cd $HOME/AutoCraft/bungeecord/
+java -jar $HOME/AutoCraft/bungeecord/BungeeCord.jar -DIReallyKnowWhatIAmDoingISwear && sleep 15 && end
 
 echo "Generated!"
 

@@ -142,7 +142,6 @@ if (dialog --title "Plugins" --yesno "Do you want to copy over preconfigured plu
     echo "Done!"
     else
     echo "Not transfering plugins!"
-    break
 fi
 
 echo "Appending port to Directory!"

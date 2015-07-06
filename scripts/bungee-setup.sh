@@ -39,6 +39,7 @@ done
 
 echo "Using $ram MB of ram!"
 
+cp $HOME/AutoCraft/resources/configs/bungeecord/start.sh $HOME/AutoCraft/bungeecord/start.sh
 sed -i "s/ram/-Xmx"$ram"M/g" $HOME/AutoCraft/bungeecord/start.sh
 
 echo "Done!"
@@ -47,7 +48,7 @@ echo "Starting up to generate configs!"
 
 java -jar $HOME/AutoCraft/bungeecord/BungeeCord.jar
 
-sleep 10
+sleep 15
 
 end
 

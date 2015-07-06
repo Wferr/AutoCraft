@@ -39,7 +39,7 @@ done
 
 echo "Using $ram MB of ram!"
 
-sed -i "s/ram/"$ram"mb/g" $HOME/AutoCraft/bungeecord/start.sh
+sed -i "s/ram/-Xmx"$ram"M/g" $HOME/AutoCraft/bungeecord/start.sh
 
 echo "Done!"
 

@@ -39,7 +39,7 @@ done
 echo "Using $ram MB of ram!"
 
 cp $HOME/AutoCraft/resources/configs/start.sh $HOME/AutoCraft/servers/$name/start.sh
-sed -i "s/ram/"$ram"mb/g" $HOME/AutoCraft/servers/$name/start.sh
+sed -i "s/ram/-Xmx"$ram"M/g" $HOME/AutoCraft/servers/$name/start.sh
 
 echo "Done!"
 }

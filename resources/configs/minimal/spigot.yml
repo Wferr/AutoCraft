@@ -29,7 +29,7 @@ settings:
   player-shuffle: 0
   late-bind: false
   user-cache-size: 1000
-  bungeecord: false
+  bungeecord: true
   int-cache-limit: 1024
   moved-wrongly-threshold: 0.0625
   moved-too-quickly-threshold: 100.0

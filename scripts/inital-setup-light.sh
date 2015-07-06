@@ -33,7 +33,7 @@ echo "Building/Installing Jars!"
 
 /$HOME/AutoCraft/scripts/bungee-update.sh
 /$HOME/AutoCraft/scripts/spigot-update.sh
-/$HOME/AutoCraft/scriptps/bungee-setup.sh
+/$HOME/AutoCraft/scripts/bungee-setup.sh
 
 echo "Install finished!"
 echo "Enjoy AutoCraft!"

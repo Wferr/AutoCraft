@@ -10,6 +10,12 @@ if tmux has-session -t AutoCraft &> /dev/null
     exit
 fi
 
+if [  -f $HOME/AutoCraft/bungeecord/BungeeCord.jar ]; then
+    echo "BungeeCord is not setup!"
+    echo "Please set up before proceeding!"
+    exit 1
+fi
+
 echo "Session doesnt exist! Creating!"
 tmux new-session -d -s 'AutoCraft'
 echo "Spliting Windows!"
@@ -22,7 +28,7 @@ tmux send -t AutoCraft:0.0 ./$HOME/AutoCraft/bungeecord/start.sh ENTER
 echo "Done!"
 
 echo "Starting HTOP!"
-tmux send -t AutoCraft:0.1 HTOP ENTER
+tmux send -t AutoCraft:0.1 htop ENTER
 echo "Done!"
 
 echo "Creating New Window!"

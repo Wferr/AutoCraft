@@ -1,6 +1,6 @@
 while :
 do
-java ram -jar spigot.jar
+java ram -DIReallyKnowWhatIAmDoingISwear -jar spigot.jar
 
 echo 'Restarting in 5'
 sleep 1

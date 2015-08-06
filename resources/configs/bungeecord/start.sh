@@ -1,6 +1,6 @@
 while :
 do
-java ram -jar BungeeCord.jar -DIReallyKnowWhatIAmDoingISwear
+java ram -DIReallyKnowWhatIAmDoingISwear -jar BungeeCord.jar
 
 echo 'Restarting in 5'
 sleep 1

@@ -1,8 +1,4 @@
-#!/bin/bash
-set -e
-
-#Controller script
-
+function controller {
 echo "Reading config!"
 
 source $HOME/AutoCraft/resources/config.conf
@@ -48,3 +44,4 @@ do
 		*) echo invalid option;;
     esac
 done
+}

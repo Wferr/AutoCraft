@@ -1,9 +1,3 @@
-#!/bin/bash
-set -e
-
-#Backup Controller Script
-set -e
-
 #format of file name
 NOW=$(date +"%m-%d-%y")
 

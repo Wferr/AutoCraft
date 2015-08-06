@@ -1,8 +1,4 @@
-#!/bin/bash
-set -e
-#Used to add new spigot to AutoCraft
-
-#Used to set server port
+function spigot-addserver {
 function port-set {
 echo "Type the port of the server you want to add in a range from 25566~2600, followed by [ENTER]:"
 
@@ -150,3 +146,4 @@ mv $HOME/AutoCraft/servers/$name $HOME/AutoCraft/servers/"$name"_"$port"
 echo "Done!"
 
 echo "Server has finished installing!"
+}

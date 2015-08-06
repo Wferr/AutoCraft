@@ -1,6 +1,4 @@
-#!/bin/bash
-set -e
-
+function logger {
 NOW=$(date +"%m-%d-%y")
 
 echo "Used to handle archving logs!"
@@ -12,3 +10,4 @@ if [ ! -d $HOME/AutoCraft/logs/$NOW ]; then
 fi
 
 echo "Archiving BungeeCord Logs!"
+}

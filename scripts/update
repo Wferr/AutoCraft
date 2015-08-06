@@ -1,6 +1,4 @@
-#!/bin/bash
-set -e
-
+function update {
 dialog --menu "Update Options" 10 60 20  1 Both 2 Spigot 3 Bungee 2>$HOME/AutoCraft/resources/tmp/update.tmp
  
 if [ "$?" = "0" ]
@@ -34,3 +32,4 @@ else
 fi
 
 rm -f $HOME/AutoCraft/resources/tmp/update.tmp
+}

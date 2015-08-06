@@ -1,8 +1,4 @@
-#!/bin/bash
-set -e
-
-#Startup Script
-
+function startup {
 echo "Cheking if TMUX session exists"
 if tmux has-session -t AutoCraft &> /dev/null
     then
@@ -44,3 +40,4 @@ do
     echo "Starting $d"
 done
 echo "Done!"
+}

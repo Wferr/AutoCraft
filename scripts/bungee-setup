@@ -1,8 +1,4 @@
-#!/bin/bash
-set -e
-
-#Used for inital setup of BungeeCord suite
-
+function bungee-setup {
 if [ ! -f $HOME/AutoCraft/resources/jars/BungeeCord.jar ]; then
     echo "BungeeCord.jar does not exist!"
     echo "Please run update.sh!"
@@ -52,3 +48,4 @@ java -jar $HOME/AutoCraft/bungeecord/BungeeCord.jar -DIReallyKnowWhatIAmDoingISw
 echo "Generated!"
 
 echo "Done!"
+}

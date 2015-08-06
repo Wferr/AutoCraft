@@ -1,7 +1,4 @@
-#!/bin/bash
-set -e
-#Used to Update BungeeCord Suite
-
+function bungee-update {
 if [ ! -f $HOME/AutoCraft/resources/jars/BungeeCord.jar ]; then
 	echo "BungeeCord not found, Downloading!"
 	cd $HOME/AutoCraft/resources/jars/
@@ -33,3 +30,4 @@ rm $HOME/AutoCraft/resources/jars/BungeeCord.jar
 mv $HOME/AutoCraft/resources/tmp/BungeeCord.jar $HOME/AutoCraft/resources/jars/BungeeCord.jar
 
 echo "Done!"
+}

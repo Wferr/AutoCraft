@@ -81,6 +81,7 @@ mkdir $HOME/AutoCraft/backups/servers
 mkdir $HOME/AutoCraft/bungeecord/
 mkdir $HOME/AutoCraft/resources/jars/
 mkdir $HOME/AutoCraft/resources/spigot/
+mkdir $HOME/AutoCraft/resources/paperspigot/
 mkdir $HOME/AutoCraft/resources/tmp/
 mkdir $HOME/AutoCraft/resources/plugins/
 mkdir $HOME/AutoCraft/servers/
@@ -104,6 +105,7 @@ echo "Building/Installing Jars!"
 
 /$HOME/AutoCraft/scripts/bungee-update.sh
 /$HOME/AutoCraft/scripts/spigot-update.sh
+/$HOME/AutoCraft/scripts/paperspigot-update.sh
 /$HOME/AutoCraft/scripts/bungee-setup.sh
 
 echo "Install finished!"

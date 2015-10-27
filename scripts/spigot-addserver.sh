@@ -86,8 +86,18 @@ mkdir $HOME/AutoCraft/servers/$name
 echo "Done!"
 echo "Copying over basic files!"
 
+if (dialog --title "EULA" --yesno "Do you Want to use PaperSpigot?" 10 60) then
+    echo "Moving PaperSpigot Over"
+    cp $HOME/AutoCraft/resources/jars/paperspigot.jar $HOME/AutoCraft/servers/$name/Spigot.jar
+    touch $HOME/AutoCraft/servers/$name/paperspigot
+else
+    echo "Using Spigot"
+    cp $HOME/AutoCraft/resources/jars/Spigot.jar $HOME/AutoCraft/servers/$name/Spigot.jar
+fi
+
+echo "Copying Over EULA"
 cp $HOME/AutoCraft/resources/configs/eula.txt $HOME/AutoCraft/servers/$name/eula.txt
-cp $HOME/AutoCraft/resources/jars/Spigot.jar $HOME/AutoCraft/servers/$name/Spigot.jar
+
 
 echo "Done!"
 

@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-dialog --menu "Update Options" 10 60 20  1 Both 2 Spigot 3 Bungee 2>$HOME/AutoCraft/resources/tmp/update.tmp
+dialog --menu "Update Options" 10 60 20  1 All 2 Spigot 3 PaperSpigot 4 Bungee 2>$HOME/AutoCraft/resources/tmp/update.tmp
  
 if [ "$?" = "0" ]
 then
@@ -9,9 +9,10 @@ then
  
         if [ "$_return" = "1" ]
         then
-        	echo "Updating Both"
+        	echo "Updating All"
         	/$HOME/AutoCraft/scripts/bungee-update.sh
 			/$HOME/AutoCraft/scripts/spigot-update.sh
+            /$HOME/AutoCraft/scripts/paperspigot-update.sh
             exit 0
         fi
  
@@ -24,11 +25,17 @@ then
  
         if [ "$_return" = "3" ]
         then
-        	echo "Updating BungeeCord"
-            /$HOME/AutoCraft/scripts/bungee-update.sh
+        	echo "Updating PaperSpigot"
+            /$HOME/AutoCraft/scripts/paperspigot-update.sh
             exit 0
         fi
- 
+
+        if [ "$_return" = "4" ]
+        then
+            echo "Updating BungeeCord"
+            /$HOME/AutoCraft/scripts/bungee-update.sh
+            exit 0
+        fi 
 else
         echo "Cancled"
 fi
